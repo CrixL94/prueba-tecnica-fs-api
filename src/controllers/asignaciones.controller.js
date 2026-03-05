@@ -36,7 +36,7 @@ exports.listarAsignaciones = async (req, res) => {
   try {
     const pool = await poolPromise;
     const result = await pool.request()
-      .query('select * from dbo.Asignaciones_Sucursales');
+      .query('select * from dbo.vw_AsignacionesDetalladas');
     res.json(result.recordset);
   } catch (error) {
     res.status(500).json({ error: error.message });
