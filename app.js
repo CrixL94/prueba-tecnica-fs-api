@@ -6,6 +6,7 @@ const authRoutes = require('./src/routes/auth.routes');
 const assignmentRoutes = require('./src/routes/asignaciones.routes');
 const sucursalesRoutes = require('./src/routes/sucursales.routes');
 const colaboradoresRoutes = require('./src/routes/colaboradores.routes');
+const viajesRoutes = require("./src/routes/viajes.routes");
 const verificarToken = require('./src/middlewares/auth.middleware');
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(verificarToken);
 app.use('/api/asignaciones', assignmentRoutes);
 app.use('/api/sucursales', sucursalesRoutes);
 app.use('/api/colaboradores', colaboradoresRoutes);
+app.use('/api/viajes', viajesRoutes);
 
 const PORT = process.env.PORT;
 
