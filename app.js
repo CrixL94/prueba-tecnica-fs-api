@@ -8,6 +8,7 @@ const sucursalesRoutes = require('./src/routes/sucursales.routes');
 const colaboradoresRoutes = require('./src/routes/colaboradores.routes');
 const viajesRoutes = require("./src/routes/viajes.routes");
 const transportistasRoutes = require("./src/routes/transportistas.routes");
+const reportesRoutes = require('./src/routes/reportes.routes');
 
 const verificarToken = require('./src/middlewares/auth.middleware');
 
@@ -28,6 +29,7 @@ app.use('/api/sucursales', sucursalesRoutes);
 app.use('/api/colaboradores', colaboradoresRoutes);
 app.use('/api/viajes', viajesRoutes);
 app.use('/api/transportistas', transportistasRoutes);
+app.use('/api/reportes', reportesRoutes);
 
 const PORT = process.env.PORT;
 
