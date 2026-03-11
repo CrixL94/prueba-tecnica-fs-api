@@ -5,7 +5,7 @@ exports.listarColaboradores = async (req, res) => {
   try {
     const pool = await poolPromise;
     const result = await pool.request()
-      .query('select * from dbo.Colaboradores');
+      .query('select * from dbo.vw_ColaboradoresDetalle where IdEstado = 1');
     res.json(result.recordset);
   } catch (error) {
     res.status(500).json({ error: error.message });

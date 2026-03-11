@@ -4,5 +4,6 @@ const transportistasController = require("../controllers/transportistas.controll
 
 // Obtener todas las asignaciones
 router.get('/', transportistasController.listarTranportistas);
+router.get('/view', transportistasController.listarTransportistasVista);
 
 module.exports = router;
